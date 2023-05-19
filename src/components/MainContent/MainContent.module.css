@@ -1,0 +1,7 @@
+.mainContent {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-right: 1px solid #C2C2C2;
+    flex-grow: 1;
+}
