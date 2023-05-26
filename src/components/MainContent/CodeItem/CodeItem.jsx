@@ -47,7 +47,7 @@ import axios from 'axios';
 
 function CodeItem({ classifierId, subText }) {
   const [modalVisible, setModalVisible] = React.useState(false);
-  const [value, setValue] = React.useState();
+  const [value, setValue] = React.useState(classifierId);
   const [treeData, setTreeData] = React.useState([]);
   const onChange = (newValue) => {
     setValue(newValue);
@@ -56,11 +56,19 @@ function CodeItem({ classifierId, subText }) {
     setModalVisible(!modalVisible);
   }; */
 
-  axios.get('http://192.168.0.23:8083/tmrsEvolve/API/getClassifierWork?login=com2@intas-company.com&password=6TEtkYq4zp').then((resp) => {
-    console.log(resp.data.data);
-  }).catch(() => {
-    console.log('error');
-  });
+  React.useEffect(
+    () => {
+      axios.get('http://192.168.0.23:8083/tmrsEvolve/API/getClassifierWork?login=com2@intas-company.com&password=6TEtkYq4zp').then((resp) => {
+        setTreeData(resp.data.data.classifier)
+        console.log(resp.data.data);
+      }).catch(() => {
+        console.log('error');
+      });
+    },
+    [setTreeData]
+  );
+
+  
 
   return (
     <>
@@ -82,7 +90,7 @@ function CodeItem({ classifierId, subText }) {
             treeDefaultExpandAll
             onChange={onChange}
             treeData={treeData}
-            listHeight={1222}
+            /* listHeight={1222} */
           />
           {/* <button className={styles.codeItem__btn} onClick={openCipherModal}>
               {
