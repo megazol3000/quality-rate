@@ -51,6 +51,7 @@ function App() {
         <>
           <MainContent checkListData={checkListData}/>
           <Sidebar/>
+          <div id='react-modals'></div>
         </>
       )}
     </div>

@@ -4,7 +4,6 @@ import CheckListItem from './CheckListItem/CheckListItem';
 import CodeItem from './CodeItem/CodeItem';
 
 function MainContent({checkListData}) {
-  console.log(11,checkListData);
   return (
     <>
       <div className={styles.mainContent}>
