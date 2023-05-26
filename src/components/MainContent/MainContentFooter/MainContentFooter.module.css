@@ -1,7 +1,8 @@
 .mainContentFooter {
   height: 74px;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 500px);
+  border-right: 1px solid #C2C2C2;
   left: 0;
   bottom: 0;
   background: #f2f2f2;

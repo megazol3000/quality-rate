@@ -1,8 +1,9 @@
 .sidebarFooter {
     height: 74px;
     position: absolute;
-    width: 100%;
-    left: 0;
+    width: 500px;
+    left: auto;
+    right: 0;
     bottom: 0;
     background: #f2f2f2;
 }

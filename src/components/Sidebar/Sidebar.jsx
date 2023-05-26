@@ -4,9 +4,12 @@ import SidebarFooter from './SidebarFooter/SidebarFooter';
 
 function Sidebar() {
   return (
-    <div className={styles.sidebar}>
+    <>
+      <div className={styles.sidebar}>
+        SideBar
+      </div>
       <SidebarFooter />
-    </div>
+    </>
   )
 }
 

@@ -2,6 +2,9 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    padding: 24px;
     border-right: 1px solid #C2C2C2;
+    height: calc(100% - 74px);
+    overflow: auto;
     flex-grow: 1;
 }

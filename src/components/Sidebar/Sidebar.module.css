@@ -1,5 +1,7 @@
 .sidebar {
-    width: 485px;
+    width: 500px;
+    min-width: 500px;
     height: 100%;
     position: relative;
+    padding: 24px;
 }
